@@ -88,20 +88,21 @@ footer {
 /* about.html */
 .back {
     display: flex;
-    justify-content: center; /* カード全体を中央に配置 */
+    justify-content: center;
     align-items: center;
-    background-color: rgb(94, 94, 94);
-    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
-    border-radius: 10px;
-    padding: 20px;
-    margin: 30px auto; /* 上下の余白を確保 & 中央寄せ */
     width: 100%;
-    max-width: 600px; /* カードの最大幅を設定 */
+    padding: 20px;
 }
 
 .card {
     text-align: left;
     width: 100%;
+    max-width: 600px;
+    padding: 20px;
+    margin: 30px auto;
+    background-color: rgb(94, 94, 94);
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+    border-radius: 10px;
 }
 
 .card p {
@@ -116,13 +117,21 @@ footer {
 }
 
 .description {
-    display: none;
-    margin-top: 2px;
-    padding: 4px;
-    padding-left: 25px;
-    padding-bottom: 25px;
-    text-align: left;
-    font-size: 20px;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s ease-in-out, transform 0.3s ease-in-out;
+    position: absolute;
+    margin-bottom: 40px;
+    padding-left: 70px;
+    transform: translateY(-30px);
+    width: calc(100% - 20px); 
+}
+
+.description.show {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(-24px);
+    text-decoration: underline;
 }
 
 /* discord.html */

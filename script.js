@@ -36,7 +36,7 @@ document.addEventListener("DOMContentLoaded", function() {
         } else if (href.replace('./', '') === currentPage) {
             link.classList.add('active');
         }
-        
+
         // リンククリック時にメニューを閉じないようにする処理
         link.addEventListener('click', function(event) {
             event.stopPropagation();
@@ -50,9 +50,9 @@ function toggleDescription(id) {
 
     descriptions.forEach(desc => {
         if (desc.id === id) {
-            desc.style.display = (desc.style.display === "block") ? "none" : "block";
+            desc.classList.toggle("show");
         } else {
-            desc.style.display = "none";
+            desc.classList.remove("show");
         }
     })
 }
