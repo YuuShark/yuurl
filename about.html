@@ -3,10 +3,54 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./style.css">
+    <script src="script.js"></script>
     <title>YuuSharkについて</title>
 </head>
 <body>
-    <h1>ここにゆーについて書く予定</h1>
-    <p>ポチッとな</p>
+    <div class="menu-icon" onclick="toggleMenu(event)">
+        <div class="line"></div>
+        <div class="line"></div>
+        <div class="line"></div>
+    </div><!-- ３本線のやつ -->
+
+    <div id="menu" class="nav-menu">
+        <a href="./">home</a>
+        <a href="./about.html">about</a>
+        <a href="./history.html">history</a>
+        <a href="./discord.html">discord</a>
+    </div><!-- ナビゲーションのメニュー -->
+
+    <header>
+        <div class="title">
+            <h1>YuuSharkについて</h1>
+        </div><!-- title -->
+    </header>
+    <main>
+        <div class="back">
+            <div class="card">
+                <p>名前：ゆー</p>
+                <p>性別：男</p>
+                <p>年齢：20歳</p>
+                <p>誕生日：9月13日</p>
+                <p>出身地：茨城県</p>
+                <p>現在地：
+                    <span class="toggle-text" onclick="toggleDescription('chiba')">千葉県</span>
+                </p>
+                <div id="chiba" class="description">・東京ディズニーリゾートがあるらしいよ！</div>
+                <p>趣味：
+                    <span class="toggle-text" onclick="toggleDescription('game')">ゲーム</span>
+                    <span class="toggle-text" onclick="toggleDescription('programming')">プログラミング</span>
+                    <span class="toggle-text" onclick="toggleDescription('music')">音楽鑑賞</span>
+                </p>
+                <div id="game" class="description">・最近はMinecraftとかテトリスやってます</div>
+                <div id="programming" class="description">・よく使う言語：JavaScript、Python、Java ,etc...</div>
+                <div id="music" class="description">・主にJPOP系の曲を聴いてます！</div>
+            </div>
+        </div>
+    </main>
+    <footer>
+        © YuuShark
+    </footer>
 </body>
 </html>
