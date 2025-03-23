@@ -27,12 +27,16 @@ document.addEventListener("DOMContentLoaded", function() {
 
     menuIcon.addEventListener("click", toggleMenu);
 
-    const currentPage = window.location.pathname.split('/').pop() || 'index.html';
+    const currentPage = window.location.pathname.endsWith('/') ? "./" : window.location.pathname.split('/').pop() || 'index.html';
+
     menuLinks.forEach(link => {
-        const href = link.getAttribute('href').replace('./', '');
-        if (currentPage === href) {
+        const href = link.getAttribute('href');
+        if (href === './' && currentPage === "./") {
+            link.classList.add('active');
+        } else if (href.replace('./', '') === currentPage) {
             link.classList.add('active');
         }
+        
         // リンククリック時にメニューを閉じないようにする処理
         link.addEventListener('click', function(event) {
             event.stopPropagation();
