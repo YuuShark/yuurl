@@ -1,0 +1,139 @@
+/* 共通 */
+html, body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #393939;
+    color: white;
+}
+
+.title {
+    text-align: center;
+    margin-top: 20px;
+}
+
+h1 {
+    font-size: 40px;
+}
+
+header {
+    text-align: center;
+    margin: 20px 0;
+}
+
+.menu-icon {
+    position: absolute;
+    top: 35px;
+    left: 20px;
+    cursor: pointer;
+    z-index: 1000;
+}
+
+.line {
+    width: 30px;
+    height: 2px;
+    background-color: white;
+    margin: 6px 0;
+}
+
+.nav-menu {
+    position: fixed;
+    left: -250px;
+    width: 250px;
+    top: 0;
+    height: 100%;
+    background-color: #333;
+    padding-top: 70px;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    transition: left 0.3s ease;
+    z-index: 999;
+}
+
+.nav-menu a {
+    color: white;
+    text-decoration: none;
+    margin: 20px 0;
+    font-size: 1.7em;
+    padding-bottom: 5px;
+    padding-left: 15px;
+}
+
+.nav-menu a.active {
+    border-bottom: 1px solid rgb(255, 0, 0);
+}
+
+.nav-menu a:hover {
+    color: #9f9f9f;
+}
+
+.nav-menu.show {
+    left: 0;
+}
+
+main {
+    flex: 1;
+}
+
+footer {
+    display: block;
+    text-align: center;
+    padding: 10px;
+}
+
+/* about.html */
+.back {
+    display: flex;
+    justify-content: center; /* カード全体を中央に配置 */
+    align-items: center;
+    background-color: rgb(94, 94, 94);
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+    border-radius: 10px;
+    padding: 20px;
+    margin: 30px auto; /* 上下の余白を確保 & 中央寄せ */
+    width: 100%;
+    max-width: 600px; /* カードの最大幅を設定 */
+}
+
+.card {
+    text-align: left;
+    width: 100%;
+}
+
+.card p {
+    margin: 10px 30px 30px 30px;
+    font-size: 20px;
+}
+
+.toggle-text {
+    color: lightblue;
+    cursor: pointer;
+    text-decoration: underline;
+}
+
+.description {
+    display: none;
+    margin-top: 2px;
+    padding: 4px;
+    padding-left: 18px;
+    text-align: left;
+    font-size: 20px;
+}
+
+/* discord.html */
+
+a {
+    text-decoration: none;
+    color: red;
+    font-size: 1.2em;
+    padding-bottom: 20px;
+}
+
+.discord-link {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+}
